@@ -1,0 +1,1 @@
+export const API_FOOTBALL_KEY = "700f8299702bd74e2b56708ed35d0604";

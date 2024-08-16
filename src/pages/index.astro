@@ -1,0 +1,32 @@
+---
+
+---
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <meta name="viewport" content="width=device-width" />
+        <meta name="generator" content={Astro.generator} />
+        <title>Astro</title>
+    </head>
+    <body>
+        <h1>Welcome to my OUR OWN DATA</h1>
+        <p>
+            Here we are going to create an app to share football data and create
+            analysis and predictions.
+        </p>
+        <h2>Enjoy!</h2>
+
+		<p id="response"></p>
+        <script>
+			import { getLeagues } from "../js/leagues";
+
+			const leagues = await getLeagues();
+			const responseElement = document.getElementById('response');
+			responseElement.innerText = JSON.stringify(leagues.response)
+			console.log(leagues.response)
+
+        </script>
+    </body>
+</html>
